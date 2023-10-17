@@ -11,7 +11,9 @@ public class ArrayManipulation {
 
 
     public static long arrayManipulation(int n, List<List<Integer>> queries) {
-        long[] currentArray = new long[n+1];
+        long[] currentArray = new long[n + 1];
+        long currentSum = 0;
+        long maxValue = 0;
 
 
         for (List<Integer> query : queries) {
@@ -24,14 +26,11 @@ public class ArrayManipulation {
 
         }
 
-        long currentSum = 0;
-        long maxValue = 0;
-
         for (long l : currentArray) {
             currentSum += l;
             maxValue = Math.max(currentSum, maxValue);
         }
 
         return maxValue;
-}
+    }
 }
