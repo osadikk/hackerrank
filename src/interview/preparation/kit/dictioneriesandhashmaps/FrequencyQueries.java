@@ -10,7 +10,7 @@ public class FrequencyQueries {
 
         List<Integer> frequenciesOutput = new ArrayList<>();
 
-        //Check time complexity of LinkedHashMap vs HashMap
+        //Check iteration performance on LinkedHashMap vs HashMap
         Map<Integer, Integer> mapQuery= new LinkedHashMap<>();
 
         for(int i=0; i<queries.size(); i++){
